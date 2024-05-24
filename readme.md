@@ -2,11 +2,14 @@
 
 This is a sample project to exercise paketo buildpacks and the django framework
 
+## Pack
+
+https://buildpacks.io/docs/for-platform-operators/how-to/integrate-ci/pack/
+
 ## Python
 
 Install Python 
 https://docs.python.org/release/3.11.7/
-
 
 ### venv
 
@@ -36,15 +39,6 @@ python manage.py startapp polls
 
 
 ## Paketo
-
-### Base
-
-https://paketo.io/docs/howto/python/
-
-Make sure it is a well formed Python project and that requirements.txt is present.
-
-#### Buildpack.yaml
-
 
 ### Build
 
