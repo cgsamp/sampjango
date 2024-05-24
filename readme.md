@@ -23,7 +23,7 @@ Create Django project
 
 ```
 python -m pip install Django
-django-admin startproject buildexpo
+django-admin startproject build
 ```
 
 Create app within project
@@ -32,17 +32,34 @@ Create app within project
 python manage.py startapp polls
 ```
 
+## git
 
 
 ## Paketo
 
 ### Base
 
-### Build
-
 https://paketo.io/docs/howto/python/
 
-### Deploy
+Make sure it is a well formed Python project and that requirements.txt is present.
 
-### Manage
+#### Buildpack.yaml
+
+
+### Build
+
+```
+pack build polls --builder paketobuildpacks/builder-jammy-full
+```
+
+### Test
+
+```
+docker run --interactive --tty --publish 8000:8000 polls manage.py runserver 0.0.0.0:8000
+```
+
+From another terminal:
+```
+curl 127.0.0.1:8000/polls/ 
+```
 
